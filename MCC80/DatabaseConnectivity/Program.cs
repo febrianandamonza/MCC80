@@ -2263,7 +2263,9 @@ namespace DatabaseConnectivity
 
             SqlCommand sqlCommand = new SqlCommand();
             sqlCommand.Connection = _connection;
-            sqlCommand.CommandText = "UPDATE employees SET first_name (@first_nama), email = (@n_email), phone_number = (@phone_num), hire_date = (@hire_d), salary = (@n_salary), comission_pct = (@comission), manager_id = (@id_manager), job_id = (@id_job), department_id = (@id_department), last_name = (@last_nama) WHERE id = (@id_employees))";
+            sqlCommand.CommandText = "UPDATE employees SET first_name = (@first_nama), email = (@n_email), phone_number = (@phone_num)," +
+                "hire_date = (@hire_d), salary = (@n_salary), comission_pct = (@comission), manager_id = (@id_manager), job_id = (@id_job), " +
+                "department_id = (@id_department), last_name = (@last_nama) WHERE id = (@id_employees)";
 
             _connection.Open();
             SqlTransaction transaction = _connection.BeginTransaction();
@@ -2339,11 +2341,11 @@ namespace DatabaseConnectivity
                 int result = sqlCommand.ExecuteNonQuery();
                 if (result > 0)
                 {
-                    Console.WriteLine("Insert Success");
+                    Console.WriteLine("Update Success");
                 }
                 else
                 {
-                    Console.WriteLine("Insert Failed");
+                    Console.WriteLine("Update Failed");
                 }
                 transaction.Commit();
                 _connection.Close();
