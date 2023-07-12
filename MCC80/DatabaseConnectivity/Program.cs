@@ -24,831 +24,892 @@ namespace DatabaseConnectivity
             do
             {
                 MenuUtama();
-                Console.Write("Input Pilihan = ");
-                int pilihan = Convert.ToInt32(Console.ReadLine());  
+                try
+                {
+                    Console.Write("Input Pilihan = ");
+                    int pilihan = Convert.ToInt32(Console.ReadLine());
                     switch (pilihan)
                     {
                         case 1:
-                        bool back = true;
-                        do
-                        {
-                            Console.Clear();
-                            Console.WriteLine("=====================================");
-                            Console.WriteLine("Menu Table Employee");
-                            Console.WriteLine("          By Febri Ananda Monza");
-                            Console.WriteLine("=====================================");
-                            MenuCRUD();
-                            Console.Write("Input Pilihan = ");
-                            int pilihan2 = Convert.ToInt32(Console.ReadLine());
-                            int id, salary, department_id;
-                            string first_name, last_name, email, phone, job_id, hire_date;
-                            
-                            decimal comission;
-                            switch (pilihan2)
+                            bool back = true;
+                            do
                             {
-                                case 1:
-                                    try
-                                    {
-                                        Console.WriteLine("Inputkan Data");
-                                        Console.Write("ID : ");
-                                        id = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("First Name : ");
-                                        first_name = Console.ReadLine();
-                                        Console.Write("Last Name : ");
-                                        last_name = Console.ReadLine();
-                                        Console.Write("Email : ");
-                                        email = Console.ReadLine();
-                                        Console.Write("Phone Number : ");
-                                        phone = Console.ReadLine();
-                                        Console.Write("Hire Date (MM//DD/YYYY) : ");
-                                        hire_date = Console.ReadLine();
-                                        Console.Write("Salary : ");
-                                        salary = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("Comission PCT : ");
-                                        comission = Convert.ToDecimal(Console.ReadLine());
-                                        Console.Write("Job ID : ");
-                                        job_id = Console.ReadLine();
-                                        Console.Write("Department ID : ");
-                                        department_id = Convert.ToInt32(Console.ReadLine());
+                                Console.Clear();
+                                Console.WriteLine("=====================================");
+                                Console.WriteLine("Menu Table Employee");
+                                Console.WriteLine("          By Febri Ananda Monza");
+                                Console.WriteLine("=====================================");
+                                MenuCRUD();
+                                try
+                                {
+                                    Console.Write("Input Pilihan = ");
+                                    int pilihan2 = Convert.ToInt32(Console.ReadLine());
+                                    int id, salary, department_id;
+                                    string first_name, last_name, email, phone, job_id, hire_date;
 
-                                        InsertEmployees(id, first_name, last_name, email, phone, hire_date, salary, comission, id, job_id, department_id);
+                                    decimal comission;
+                                    switch (pilihan2)
+                                    {
+                                        case 1:
+                                            try
+                                            {
+                                                Console.WriteLine("Inputkan Data");
+                                                Console.Write("ID : ");
+                                                id = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("First Name : ");
+                                                first_name = Console.ReadLine();
+                                                Console.Write("Last Name : ");
+                                                last_name = Console.ReadLine();
+                                                Console.Write("Email : ");
+                                                email = Console.ReadLine();
+                                                Console.Write("Phone Number : ");
+                                                phone = Console.ReadLine();
+                                                Console.Write("Hire Date (MM//DD/YYYY) : ");
+                                                hire_date = Console.ReadLine();
+                                                Console.Write("Salary : ");
+                                                salary = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("Comission PCT : ");
+                                                comission = Convert.ToDecimal(Console.ReadLine());
+                                                Console.Write("Job ID : ");
+                                                job_id = Console.ReadLine();
+                                                Console.Write("Department ID : ");
+                                                department_id = Convert.ToInt32(Console.ReadLine());
 
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah !");
-                                    }
-                                   Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 2:
-                                    try
-                                    {
-                                        Console.Write("Id yang ingin diupdate : ");
-                                        id = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("First Name : ");
-                                        first_name = Console.ReadLine();
-                                        Console.Write("Last Name : ");
-                                        last_name = Console.ReadLine();
-                                        Console.Write("Email : ");
-                                        email = Console.ReadLine();
-                                        Console.Write("Phone Number : ");
-                                        phone = Console.ReadLine();
-                                        Console.Write("Hire Date (MM//DD/YYYY) : ");
-                                        hire_date = Console.ReadLine();
-                                        Console.Write("Salary : ");
-                                        salary = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("Comission PCT : ");
-                                        comission = Convert.ToDecimal(Console.ReadLine());
-                                        Console.Write("Job ID : ");
-                                        job_id = Console.ReadLine();
-                                        Console.Write("Department ID : ");
-                                        department_id = Convert.ToInt32(Console.ReadLine());
-                                        UpdateEmployees(id, first_name, last_name, email, phone, hire_date, salary, comission, id, job_id, department_id);
+                                                InsertEmployees(id, first_name, last_name, email, phone, hire_date, salary, comission, id, job_id, department_id);
 
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah !");
+                                            }
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 2:
+                                            try
+                                            {
+                                                Console.Write("Id yang ingin diupdate : ");
+                                                id = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("First Name : ");
+                                                first_name = Console.ReadLine();
+                                                Console.Write("Last Name : ");
+                                                last_name = Console.ReadLine();
+                                                Console.Write("Email : ");
+                                                email = Console.ReadLine();
+                                                Console.Write("Phone Number : ");
+                                                phone = Console.ReadLine();
+                                                Console.Write("Hire Date (MM//DD/YYYY) : ");
+                                                hire_date = Console.ReadLine();
+                                                Console.Write("Salary : ");
+                                                salary = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("Comission PCT : ");
+                                                comission = Convert.ToDecimal(Console.ReadLine());
+                                                Console.Write("Job ID : ");
+                                                job_id = Console.ReadLine();
+                                                Console.Write("Department ID : ");
+                                                department_id = Convert.ToInt32(Console.ReadLine());
+                                                UpdateEmployees(id, first_name, last_name, email, phone, hire_date, salary, comission, id, job_id, department_id);
+
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah");
+                                            }
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 3:
+                                            try
+                                            {
+                                                Console.Write("Id yang ingin didelete : ");
+                                                id = Convert.ToInt32(Console.ReadLine());
+                                                DeleteEmployees(id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 4:
+                                            try
+                                            {
+                                                Console.Write("Masukkan Id : ");
+                                                id = Convert.ToInt32(Console.ReadLine());
+                                                GetByIdEmployees(id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 5:
+                                            Console.WriteLine("Show Data Employee");
+                                            GetEmployees();
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 6:
+                                            back = false;
+                                            break;
+                                        default:
+                                            Console.WriteLine("Pilihan tidak ada !");
+                                            break;
                                     }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah");
-                                    }
+                                }
+                                catch
+                                {
+                                    Console.WriteLine("Inputan tidak boleh kosong!");
                                     Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 3:
-                                    try
-                                    {
-                                        Console.Write("Id yang ingin didelete : ");
-                                        id = Convert.ToInt32(Console.ReadLine());
-                                        DeleteEmployees(id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-                                    
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 4:
-                                    try
-                                    {
-                                        Console.Write("Masukkan Id : ");
-                                        id = Convert.ToInt32(Console.ReadLine());
-                                        GetByIdEmployees(id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-                                    
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 5:
-                                    Console.WriteLine("Show Data Employee");
-                                    GetEmployees();
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 6:
-                                    back = false;
-                                    break;
-                                default:
-                                    Console.WriteLine("Pilihan tidak ada !");
-                                    break;
-                            }
-                        } while (back);
-                            Console.ReadKey();
+                                }
+                                
+                               
+                            } while (back);
                             Console.Clear();
                             break;
                         case 2:
-                        bool back2 = true;
-                        do
-                        {
-                            Console.Clear();
-                            Console.WriteLine("=====================================");
-                            Console.WriteLine("Menu Table Department");
-                            Console.WriteLine("          By Febri Ananda Monza");
-                            Console.WriteLine("=====================================");
-                            MenuCRUD();
-                            Console.Write("Input Pilihan = ");
-                            int pilihan3 = Convert.ToInt32(Console.ReadLine());
-                            int id, location_id, manager_id;
-                            string name;
-                            switch (pilihan3)
+                            bool back2 = true;
+                            do
                             {
-                                case 1:
-                                    try
+                                Console.Clear();
+                                Console.WriteLine("=====================================");
+                                Console.WriteLine("Menu Table Department");
+                                Console.WriteLine("          By Febri Ananda Monza");
+                                Console.WriteLine("=====================================");
+                                MenuCRUD();
+                                try
+                                {
+                                    Console.Write("Input Pilihan = ");
+                                    int pilihan3 = Convert.ToInt32(Console.ReadLine());
+                                    int id, location_id, manager_id;
+                                    string name;
+                                    switch (pilihan3)
                                     {
-                                        Console.WriteLine("Inputkan Data");
-                                        Console.Write("ID : ");
-                                        id = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("Name : ");
-                                        name = Console.ReadLine();
-                                        Console.Write("Location ID : ");
-                                        location_id = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("Manager ID : ");
-                                        manager_id = Convert.ToInt32(Console.ReadLine());
+                                        case 1:
+                                            try
+                                            {
+                                                Console.WriteLine("Inputkan Data");
+                                                Console.Write("ID : ");
+                                                id = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("Name : ");
+                                                name = Console.ReadLine();
+                                                Console.Write("Location ID : ");
+                                                location_id = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("Manager ID : ");
+                                                manager_id = Convert.ToInt32(Console.ReadLine());
 
-                                        InsertDepartment(id, name, location_id, manager_id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah !1");
-                                    }
-                                    
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 2:
-                                    try
-                                    {
-                                        Console.Write("Id yang ingin diupdate : ");
-                                        id = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("Name : ");
-                                        name = Console.ReadLine();
-                                        Console.Write("Location ID : ");
-                                        location_id = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("Manager ID : ");
-                                        manager_id = Convert.ToInt32(Console.ReadLine());
+                                                InsertDepartment(id, name, location_id, manager_id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah !1");
+                                            }
 
-                                        UpdateDepartment(id, name, location_id, manager_id);
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 2:
+                                            try
+                                            {
+                                                Console.Write("Id yang ingin diupdate : ");
+                                                id = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("Name : ");
+                                                name = Console.ReadLine();
+                                                Console.Write("Location ID : ");
+                                                location_id = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("Manager ID : ");
+                                                manager_id = Convert.ToInt32(Console.ReadLine());
+
+                                                UpdateDepartment(id, name, location_id, manager_id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 3:
+                                            try
+                                            {
+                                                Console.Write("Id yang ingin didelete : ");
+                                                id = Convert.ToInt32(Console.ReadLine());
+                                                DeleteDepartment(id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 4:
+                                            try
+                                            {
+                                                Console.Write("Masukkan Id : ");
+                                                id = Convert.ToInt32(Console.ReadLine());
+                                                GetByIdDepartment(id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 5:
+                                            Console.WriteLine("Show Data Department");
+                                            GetDepartment();
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 6:
+                                            back2 = false;
+                                            break;
+                                        default:
+                                            Console.WriteLine("Pilihan tidak ada !");
+                                            break;
                                     }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-                                    
+                                }
+                                catch
+                                {
+                                    Console.WriteLine("Inputan tidak boleh kosong!");
                                     Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 3:
-                                    try
-                                    {
-                                        Console.Write("Id yang ingin didelete : ");
-                                        id = Convert.ToInt32(Console.ReadLine());
-                                        DeleteDepartment(id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-                                    
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 4:
-                                    try
-                                    {
-                                        Console.Write("Masukkan Id : ");
-                                        id = Convert.ToInt32(Console.ReadLine());
-                                        GetByIdDepartment(id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-                                    
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 5:
-                                    Console.WriteLine("Show Data Department");
-                                    GetDepartment();
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 6:
-                                    back2 = false;
-                                    break;
-                                default:
-                                    Console.WriteLine("Pilihan tidak ada !");
-                                    break;
-                            }
-                        } while (back2);
-                        Console.ReadKey();
-                        Console.Clear();
-                        break;
+                                }
+                                
+                                
+                            } while (back2);
+                            Console.Clear();
+                            break;
                         case 3:
-                        bool back3 = true;
-                        do
-                        {
-                            Console.Clear();
-                            Console.WriteLine("=====================================");
-                            Console.WriteLine("Menu Table Location");
-                            Console.WriteLine("          By Febri Ananda Monza");
-                            Console.WriteLine("=====================================");
-                            MenuCRUD();
-                            Console.Write("Input Pilihan = ");
-                            int pilihan4 = Convert.ToInt32(Console.ReadLine());
-                            int id;
-                            string street_add, postal_c, city, state_prov,country_id;
-                            switch (pilihan4)
+                            bool back3 = true;
+                            do
                             {
-                                case 1:
-                                    try
+                                Console.Clear();
+                                Console.WriteLine("=====================================");
+                                Console.WriteLine("Menu Table Location");
+                                Console.WriteLine("          By Febri Ananda Monza");
+                                Console.WriteLine("=====================================");
+                                MenuCRUD();
+                                try
+                                {
+                                    Console.Write("Input Pilihan = ");
+                                    int pilihan4 = Convert.ToInt32(Console.ReadLine());
+                                    int id;
+                                    string street_add, postal_c, city, state_prov, country_id;
+                                    switch (pilihan4)
                                     {
-                                        Console.WriteLine("Inputkan Data");
-                                        Console.Write("ID : ");
-                                        id = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("Street Address : ");
-                                        street_add = Console.ReadLine();
-                                        Console.Write("Postal Code : ");
-                                        postal_c = Console.ReadLine();
-                                        Console.Write("City : ");
-                                        city = Console.ReadLine();
-                                        Console.Write("State Province : ");
-                                        state_prov = Console.ReadLine();
-                                        Console.Write("Country ID : ");
-                                        country_id = Console.ReadLine();
+                                        case 1:
+                                            try
+                                            {
+                                                Console.WriteLine("Inputkan Data");
+                                                Console.Write("ID : ");
+                                                id = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("Street Address : ");
+                                                street_add = Console.ReadLine();
+                                                Console.Write("Postal Code : ");
+                                                postal_c = Console.ReadLine();
+                                                Console.Write("City : ");
+                                                city = Console.ReadLine();
+                                                Console.Write("State Province : ");
+                                                state_prov = Console.ReadLine();
+                                                Console.Write("Country ID : ");
+                                                country_id = Console.ReadLine();
 
-                                        InsertLocation(id, street_add,postal_c,city, state_prov, country_id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah !1");
-                                    }
+                                                InsertLocation(id, street_add, postal_c, city, state_prov, country_id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah !1");
+                                            }
 
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 2:
+                                            try
+                                            {
+                                                Console.Write("Id yang ingin diupdate : ");
+                                                id = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("Street Address : ");
+                                                street_add = Console.ReadLine();
+                                                Console.Write("Postal Code : ");
+                                                postal_c = Console.ReadLine();
+                                                Console.Write("City : ");
+                                                city = Console.ReadLine();
+                                                Console.Write("State Province : ");
+                                                state_prov = Console.ReadLine();
+                                                Console.Write("Country ID : ");
+                                                country_id = Console.ReadLine();
+
+                                                UpdateLocation(id, street_add, postal_c, city, state_prov, country_id);
+
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 3:
+                                            try
+                                            {
+                                                Console.Write("Id yang ingin didelete : ");
+                                                id = Convert.ToInt32(Console.ReadLine());
+                                                DeleteLocation(id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 4:
+                                            try
+                                            {
+                                                Console.Write("Masukkan Id : ");
+                                                id = Convert.ToInt32(Console.ReadLine());
+                                                GetByIdLocation(id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 5:
+                                            Console.WriteLine("Show Data Location");
+                                            GetLocation();
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 6:
+                                            back3 = false;
+                                            break;
+                                        default:
+                                            Console.WriteLine("Pilihan tidak ada !");
+                                            break;
+                                    }
+                                }
+                                catch
+                                {
+                                    Console.WriteLine("Inputan tidak boleh kosong!");
                                     Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 2:
-                                    try
-                                    {
-                                        Console.Write("Id yang ingin diupdate : ");
-                                        id = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("Street Address : ");
-                                        street_add = Console.ReadLine();
-                                        Console.Write("Postal Code : ");
-                                        postal_c = Console.ReadLine();
-                                        Console.Write("City : ");
-                                        city = Console.ReadLine();
-                                        Console.Write("State Province : ");
-                                        state_prov = Console.ReadLine();
-                                        Console.Write("Country ID : ");
-                                        country_id = Console.ReadLine();
-
-                                        UpdateLocation(id, street_add, postal_c, city, state_prov, country_id);
-
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 3:
-                                    try
-                                    {
-                                        Console.Write("Id yang ingin didelete : ");
-                                        id = Convert.ToInt32(Console.ReadLine());
-                                        DeleteLocation(id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 4:
-                                    try
-                                    {
-                                        Console.Write("Masukkan Id : ");
-                                        id = Convert.ToInt32(Console.ReadLine());
-                                        GetByIdLocation(id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 5:
-                                    Console.WriteLine("Show Data Location");
-                                    GetLocation();
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 6:
-                                    back3 = false;
-                                    break;
-                                default:
-                                    Console.WriteLine("Pilihan tidak ada !");
-                                    break;
-                            }
-                        } while (back3);
-                        Console.ReadKey();
-                        Console.Clear();
-                        break;
-                    case 4:
-                        bool back4 = true;
-                        do
-                        {
+                                }
+                            } while (back3);
                             Console.Clear();
-                            Console.WriteLine("=====================================");
-                            Console.WriteLine("Menu Table Country");
-                            Console.WriteLine("          By Febri Ananda Monza");
-                            Console.WriteLine("=====================================");
-                            MenuCRUD();
-                            Console.Write("Input Pilihan = ");
-                            int pilihan5 = Convert.ToInt32(Console.ReadLine());
-                            int region_id;
-                            string id, name;
-                            switch (pilihan5)
+                            break;
+                        case 4:
+                            bool back4 = true;
+                            do
                             {
-                                case 1:
-                                    try
-                                    {
-                                        Console.WriteLine("Inputkan Data");
-                                        Console.Write("ID : ");
-                                        id = Console.ReadLine();
-                                        Console.Write("Name : ");
-                                        name = Console.ReadLine();
-                                        Console.Write("Region ID : ");
-                                        region_id = Convert.ToInt32(Console.ReadLine());
-
-                                        InsertCountry(id, name, region_id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah !1");
-                                    }
-
+                                Console.Clear();
+                                Console.WriteLine("=====================================");
+                                Console.WriteLine("Menu Table Country");
+                                Console.WriteLine("          By Febri Ananda Monza");
+                                Console.WriteLine("=====================================");
+                                MenuCRUD();
+                                try
+                                {
                                     Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 2:
-                                    try
+                                    Console.Write("Input Pilihan = ");
+                                    int pilihan5 = Convert.ToInt32(Console.ReadLine());
+                                    int region_id;
+                                    string id, name;
+                                    switch (pilihan5)
                                     {
-                                        Console.Write("Id yang ingin diupdate : ");
-                                        id = Console.ReadLine();
-                                        Console.Write("Name : ");
-                                        name = Console.ReadLine();
-                                        Console.Write("Region ID : ");
-                                        region_id = Convert.ToInt32(Console.ReadLine());
+                                        case 1:
+                                            try
+                                            {
+                                                Console.WriteLine("Inputkan Data");
+                                                Console.Write("ID : ");
+                                                id = Console.ReadLine();
+                                                Console.Write("Name : ");
+                                                name = Console.ReadLine();
+                                                Console.Write("Region ID : ");
+                                                region_id = Convert.ToInt32(Console.ReadLine());
 
-                                        UpdateCountry(id, name, region_id);
+                                                InsertCountry(id, name, region_id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah !1");
+                                            }
 
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 2:
+                                            try
+                                            {
+                                                Console.Write("Id yang ingin diupdate : ");
+                                                id = Console.ReadLine();
+                                                Console.Write("Name : ");
+                                                name = Console.ReadLine();
+                                                Console.Write("Region ID : ");
+                                                region_id = Convert.ToInt32(Console.ReadLine());
+
+                                                UpdateCountry(id, name, region_id);
+
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 3:
+                                            try
+                                            {
+                                                Console.Write("Id yang ingin didelete : ");
+                                                id = Console.ReadLine();
+                                                DeleteCountry(id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 4:
+                                            try
+                                            {
+                                                Console.Write("Masukkan Id : ");
+                                                id = Console.ReadLine();
+                                                GetByIdCountry(id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 5:
+                                            Console.WriteLine("Show Data Country");
+                                            GetCountry();
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 6:
+                                            back4 = false;
+                                            break;
+                                        default:
+                                            Console.WriteLine("Pilihan tidak ada !");
+                                            break;
                                     }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-
+                                }
+                                catch
+                                {
+                                    Console.WriteLine("Inputan tidak boleh kosong!");
                                     Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 3:
-                                    try
-                                    {
-                                        Console.Write("Id yang ingin didelete : ");
-                                        id = Console.ReadLine();
-                                       DeleteCountry(id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 4:
-                                    try
-                                    {
-                                        Console.Write("Masukkan Id : ");
-                                        id = Console.ReadLine();
-                                        GetByIdCountry(id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 5:
-                                    Console.WriteLine("Show Data Country");
-                                    GetCountry();
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 6:
-                                    back4 = false;
-                                    break;
-                                default:
-                                    Console.WriteLine("Pilihan tidak ada !");
-                                    break;
-                            }
-                        } while (back4);
-                        Console.ReadKey();
-                        Console.Clear();
-                        break;
-                    case 5:
-                        bool back5 = true;
-                        do
-                        {
+                                }
+                                
+                            } while (back4);
                             Console.Clear();
-                            Console.WriteLine("=====================================");
-                            Console.WriteLine("Menu Table Regions");
-                            Console.WriteLine("          By Febri Ananda Monza");
-                            Console.WriteLine("=====================================");
-                            MenuCRUD();
-                            Console.Write("Input Pilihan = ");
-                            int pilihan6 = Convert.ToInt32(Console.ReadLine());
-                            int id;
-                            string name;
-                            switch (pilihan6)
+                            break;
+                        case 5:
+                            bool back5 = true;
+                            do
                             {
-                                case 1:
-                                    try
+                                Console.Clear();
+                                Console.WriteLine("=====================================");
+                                Console.WriteLine("Menu Table Regions");
+                                Console.WriteLine("          By Febri Ananda Monza");
+                                Console.WriteLine("=====================================");
+                                MenuCRUD();
+                                try 
+                                {
+                                    Console.Write("Input Pilihan = ");
+                                    int pilihan6 = Convert.ToInt32(Console.ReadLine());
+                                    int id;
+                                    string name;
+                                    switch (pilihan6)
                                     {
-                                        Console.WriteLine("Inputkan Data");
-                                        Console.Write("Name Region : ");
-                                        name = Console.ReadLine();
+                                        case 1:
+                                            try
+                                            {
+                                                Console.WriteLine("Inputkan Data");
+                                                Console.Write("Name Region : ");
+                                                name = Console.ReadLine();
 
-                                        InsertRegions(name);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah !1");
-                                    }
+                                                InsertRegions(name);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah !1");
+                                            }
 
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 2:
+                                            try
+                                            {
+                                                Console.Write("Id yang ingin diupdate : ");
+                                                id = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("Name Region : ");
+                                                name = Console.ReadLine();
+
+                                                UpdateRegions(id, name);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 3:
+                                            try
+                                            {
+                                                Console.Write("Id yang ingin didelete : ");
+                                                id = Convert.ToInt32(Console.ReadLine());
+                                                DeleteRegions(id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 4:
+                                            try
+                                            {
+                                                Console.Write("Masukkan Id : ");
+                                                id = Convert.ToInt32(Console.ReadLine());
+                                                GetByIdRegions(id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 5:
+                                            Console.WriteLine("Show Data Region");
+                                            GetRegions();
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 6:
+                                            back5 = false;
+                                            break;
+                                        default:
+                                            Console.WriteLine("Pilihan tidak ada !");
+                                            break;
+                                    }
+                                }
+                                catch
+                                {
+                                    Console.WriteLine("Inputan tidak boleh kosong!");
                                     Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 2:
-                                    try
-                                    {
-                                        Console.Write("Id yang ingin diupdate : ");
-                                        id = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("Name Region : ");
-                                        name = Console.ReadLine();
-
-                                        UpdateRegions(id,name);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 3:
-                                    try
-                                    {
-                                        Console.Write("Id yang ingin didelete : ");
-                                        id = Convert.ToInt32(Console.ReadLine());
-                                        DeleteRegions(id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 4:
-                                    try
-                                    {
-                                        Console.Write("Masukkan Id : ");
-                                        id = Convert.ToInt32( Console.ReadLine());
-                                        GetByIdRegions(id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 5:
-                                    Console.WriteLine("Show Data Region");
-                                    GetRegions();
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 6:
-                                    back5 = false;
-                                    break;
-                                default:
-                                    Console.WriteLine("Pilihan tidak ada !");
-                                    break;
-                            }
-                        } while (back5);
-                        Console.ReadKey();
-                        Console.Clear();
-                        break;
-                    case 6:
-                        bool back6 = true;
-                        do
-                        {
+                                }
+                            } while (back5);
                             Console.Clear();
-                            Console.WriteLine("=====================================");
-                            Console.WriteLine("Menu Table Job");
-                            Console.WriteLine("          By Febri Ananda Monza");
-                            Console.WriteLine("=====================================");
-                            MenuCRUD();
-                            Console.Write("Input Pilihan = ");
-                            int pilihan7 = Convert.ToInt32(Console.ReadLine());
-                            int min,max;
-                            string id, title;
-                            switch (pilihan7)
+                            break;
+                        case 6:
+                            bool back6 = true;
+                            do
                             {
-                                case 1:
-                                    try
+                                Console.Clear();
+                                Console.WriteLine("=====================================");
+                                Console.WriteLine("Menu Table Job");
+                                Console.WriteLine("          By Febri Ananda Monza");
+                                Console.WriteLine("=====================================");
+                                MenuCRUD();
+                                try
+                                {
+                                    Console.Write("Input Pilihan = ");
+                                    int pilihan7 = Convert.ToInt32(Console.ReadLine());
+                                    int min, max;
+                                    string id, title;
+                                    switch (pilihan7)
                                     {
-                                        Console.WriteLine("Inputkan Data");
-                                        Console.Write("ID : ");
-                                        id = Console.ReadLine();
-                                        Console.Write("Title Name : ");
-                                        title = Console.ReadLine();
-                                        Console.Write("Min Salary : ");
-                                        min = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("Max Salary : ");
-                                        max = Convert.ToInt32(Console.ReadLine());
+                                        case 1:
+                                            try
+                                            {
+                                                Console.WriteLine("Inputkan Data");
+                                                Console.Write("ID : ");
+                                                id = Console.ReadLine();
+                                                Console.Write("Title Name : ");
+                                                title = Console.ReadLine();
+                                                Console.Write("Min Salary : ");
+                                                min = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("Max Salary : ");
+                                                max = Convert.ToInt32(Console.ReadLine());
 
-                                        InsertJobs(id, title,min,max);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah !1");
-                                    }
+                                                InsertJobs(id, title, min, max);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah !1");
+                                            }
 
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 2:
+                                            try
+                                            {
+                                                Console.Write("Id yang ingin diupdate : ");
+                                                id = Console.ReadLine();
+                                                Console.Write("Title Name : ");
+                                                title = Console.ReadLine();
+                                                Console.Write("Min Salary : ");
+                                                min = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("Max Salary : ");
+                                                max = Convert.ToInt32(Console.ReadLine());
+
+                                                UpdateJobs(id, title, min, max);
+
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 3:
+                                            try
+                                            {
+                                                Console.Write("Id yang ingin didelete : ");
+                                                id = Console.ReadLine();
+                                                DeleteJobs(id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 4:
+                                            try
+                                            {
+                                                Console.Write("Masukkan Id : ");
+                                                id = Console.ReadLine();
+                                                GetByIdJobs(id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 5:
+                                            Console.WriteLine("Show Data Job");
+                                            GetJobs();
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 6:
+                                            back6 = false;
+                                            break;
+                                        default:
+                                            Console.WriteLine("Pilihan tidak ada !");
+                                            break;
+                                    }
+                                }
+                                catch
+                                {
+                                    Console.WriteLine("Inputan tidak boleh kosong!");
                                     Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 2:
-                                    try
-                                    {
-                                        Console.Write("Id yang ingin diupdate : ");
-                                        id = Console.ReadLine();
-                                        Console.Write("Title Name : ");
-                                        title = Console.ReadLine();
-                                        Console.Write("Min Salary : ");
-                                        min = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("Max Salary : ");
-                                        max = Convert.ToInt32(Console.ReadLine());
-
-                                        UpdateJobs(id, title, min, max);
-
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 3:
-                                    try
-                                    {
-                                        Console.Write("Id yang ingin didelete : ");
-                                        id = Console.ReadLine();
-                                        DeleteJobs(id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 4:
-                                    try
-                                    {
-                                        Console.Write("Masukkan Id : ");
-                                        id = Console.ReadLine();
-                                        GetByIdJobs(id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 5:
-                                    Console.WriteLine("Show Data Job");
-                                    GetJobs();
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 6:
-                                    back6 = false;
-                                    break;
-                                default:
-                                    Console.WriteLine("Pilihan tidak ada !");
-                                    break;
-                            }
-                        } while (back6);
-                        Console.ReadKey();
-                        Console.Clear();
-                        break;
+                                }
+                                
+                               
+                            } while (back6);
+                            Console.Clear();
+                            break;
                         case 7:
-                        bool back7 = true;
-                        do
-                        {
-                            Console.Clear();
-                            Console.WriteLine("=====================================");
-                            Console.WriteLine("Menu Table History");
-                            Console.WriteLine("          By Febri Ananda Monza");
-                            Console.WriteLine("=====================================");
-                            MenuCRUD();
-                            Console.Write("Input Pilihan = ");
-                            int pilihan8 = Convert.ToInt32(Console.ReadLine());
-                            int employee_id,department_id;
-                            string start_date, end_date, job_id; 
-                            switch (pilihan8)
+                            bool back7 = true;
+                            do
                             {
-                                case 1:
-                                    try
+                                Console.Clear();
+                                Console.WriteLine("=====================================");
+                                Console.WriteLine("Menu Table History");
+                                Console.WriteLine("          By Febri Ananda Monza");
+                                Console.WriteLine("=====================================");
+                                MenuCRUD();
+                                try
+                                {
+                                    Console.Write("Input Pilihan = ");
+                                    int pilihan8 = Convert.ToInt32(Console.ReadLine());
+                                    int employee_id, department_id;
+                                    string start_date, end_date, job_id;
+                                    switch (pilihan8)
                                     {
-                                        Console.WriteLine("Inputkan Data");
-                                        Console.Write("Start Date : ");
-                                        start_date = Console.ReadLine();
-                                        Console.Write("Employee ID : ");
-                                        employee_id = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("End Date : ");
-                                        end_date = Console.ReadLine();
-                                        Console.Write("Department ID : ");
-                                        department_id = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("Job ID : ");
-                                        job_id = Console.ReadLine();
+                                        case 1:
+                                            try
+                                            {
+                                                Console.WriteLine("Inputkan Data");
+                                                Console.Write("Start Date : ");
+                                                start_date = Console.ReadLine();
+                                                Console.Write("Employee ID : ");
+                                                employee_id = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("End Date : ");
+                                                end_date = Console.ReadLine();
+                                                Console.Write("Department ID : ");
+                                                department_id = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("Job ID : ");
+                                                job_id = Console.ReadLine();
 
-                                        InsertHistory(start_date, employee_id, end_date, department_id,job_id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah !1");
-                                    }
+                                                InsertHistory(start_date, employee_id, end_date, department_id, job_id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah !1");
+                                            }
 
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 2:
+                                            try
+                                            {
+                                                Console.Write("Employee ID yang ingin diupdate: ");
+                                                employee_id = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("Start Date yang ingin diupdate : ");
+                                                start_date = Console.ReadLine();
+                                                Console.Write("End Date : ");
+                                                end_date = Console.ReadLine();
+                                                Console.Write("Department ID : ");
+                                                department_id = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("Job ID : ");
+                                                job_id = Console.ReadLine();
+
+                                                UpdateHistory(start_date, employee_id, end_date, department_id, job_id);
+
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 3:
+                                            try
+                                            {
+                                                Console.Write("Employee ID yang ingin diupdate: ");
+                                                employee_id = Convert.ToInt32(Console.ReadLine());
+                                                Console.Write("Start Date yang ingin diupdate : ");
+                                                start_date = Console.ReadLine();
+                                                DeleteHistory(start_date, employee_id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 4:
+                                            try
+                                            {
+                                                Console.Write("Employee ID yang ingin diupdate: ");
+                                                employee_id = Convert.ToInt32(Console.ReadLine());
+                                                GetByIdHistory(employee_id);
+                                            }
+                                            catch
+                                            {
+                                                Console.WriteLine("Inputan Salah!");
+                                            }
+
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 5:
+                                            Console.WriteLine("Show Data History");
+                                            GetHistory();
+                                            Console.ReadKey();
+                                            Console.Clear();
+                                            Console.WriteLine("");
+                                            break;
+                                        case 6:
+                                            back7 = false;
+                                            break;
+                                        default:
+                                            Console.WriteLine("Pilihan tidak ada !");
+                                            break;
+                                    }
+                                }
+                                catch
+                                {
+                                    Console.WriteLine("Inputan tidak boleh kosong!");
                                     Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 2:
-                                    try
-                                    {
-                                        Console.Write("Employee ID yang ingin diupdate: ");
-                                        employee_id = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("Start Date yang ingin diupdate : ");
-                                        start_date = Console.ReadLine();
-                                        Console.Write("End Date : ");
-                                        end_date = Console.ReadLine();
-                                        Console.Write("Department ID : ");
-                                        department_id = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("Job ID : ");
-                                        job_id = Console.ReadLine();
-
-                                        UpdateHistory(start_date, employee_id, end_date, department_id, job_id);
-
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 3:
-                                    try
-                                    {
-                                        Console.Write("Employee ID yang ingin diupdate: ");
-                                        employee_id = Convert.ToInt32(Console.ReadLine());
-                                        Console.Write("Start Date yang ingin diupdate : ");
-                                        start_date = Console.ReadLine();
-                                        DeleteHistory(start_date,employee_id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 4:
-                                    try
-                                    {
-                                        Console.Write("Employee ID yang ingin diupdate: ");
-                                        employee_id = Convert.ToInt32(Console.ReadLine());
-                                        GetByIdHistory(employee_id);
-                                    }
-                                    catch
-                                    {
-                                        Console.WriteLine("Inputan Salah!");
-                                    }
-
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 5:
-                                    Console.WriteLine("Show Data History");
-                                    GetHistory();
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                    Console.WriteLine("");
-                                    break;
-                                case 6:
-                                    back7 = false;
-                                    break;
-                                default:
-                                    Console.WriteLine("Pilihan tidak ada !");
-                                    break;
-                            }
-                        } while (back7);
-                        Console.ReadKey();
-                        Console.Clear();
-                        break;
-                    case 8:
+                                }
+                                
+                                
+                            } while (back7);
+                            Console.Clear();
+                            break;
+                        case 8:
                             exit = false;
                             Console.WriteLine("Terima Kasih !");
                             break;
@@ -856,6 +917,15 @@ namespace DatabaseConnectivity
                             Console.WriteLine("Pilihan tidak ada !");
                             break;
                     }
+
+
+                }
+                catch
+                {
+                    Console.WriteLine("Inputan tidak boleh kosong!");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
                 
                 
             } while (exit);
