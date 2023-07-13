@@ -2158,7 +2158,7 @@ namespace DatabaseConnectivity
         }
 
         //Insert Employees
-        public static void InsertEmployees(int id, string first_name, string last_name, string email, string phone_number, String hire_date, int salary, decimal comission_pct, int manager_id, string job_id, int department_id)
+        public static void InsertEmployees(int id, string first_name, string last_name, string email, string phone_number, string hire_date, int salary, decimal comission_pct, int manager_id, string job_id, int department_id)
         {
             _connection = new SqlConnection(_connectionString);
 
