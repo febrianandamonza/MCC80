@@ -103,9 +103,16 @@ namespace MVCArchitecture
                         PressAnyKey();
                         break;
                     case 4:
-                        Console.Write("Masukkan Id : ");
-                        int id = Convert.ToInt32(Console.ReadLine());
-                        regionController.GetById(id);
+                        try
+                        {
+                            Console.Write("Masukkan Id : ");
+                            int id = Convert.ToInt32(Console.ReadLine());
+                            regionController.GetById(id);
+                        }
+                        catch
+                        {
+                            EmptyInput();
+                        }
                         PressAnyKey();
                         break;
 
@@ -149,9 +156,17 @@ namespace MVCArchitecture
                         PressAnyKey();
                         break;
                     case 4:
-                        Console.Write("Masukkan Id : ");
-                        string id = Console.ReadLine();
-                        countryController.GetById(id);
+                        try
+                        {
+                            Console.Write("Masukkan Id : ");
+                            string? id = Console.ReadLine();
+                            countryController.GetById(id);
+                        }
+                        catch
+                        {
+                            EmptyInput();
+                        }
+                        
                         PressAnyKey();
                         break;
 
@@ -191,17 +206,33 @@ namespace MVCArchitecture
                         PressAnyKey();
                         break;
                     case 3:
-                        Console.Write("Masukkan Employee Id : ");
-                        int id = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("Start Date : ");
-                        string start_date = Console.ReadLine();
-                        historyController.Delete(start_date, id);
+                        try
+                        {
+                            Console.Write("Masukkan Employee Id : ");
+                            int id = Convert.ToInt32(Console.ReadLine());
+                            Console.Write("Start Date : ");
+                            string start_date = Console.ReadLine();
+                            historyController.Delete(start_date, id);
+                        }
+                        catch
+                        {
+                            EmptyInput() ;
+                        }
+                        
                         PressAnyKey();
                         break;
                     case 4:
-                        Console.Write("Masukkan Id : ");
-                        int id_employee = Convert.ToInt32(Console.ReadLine());
-                        historyController.GetById(id_employee);
+                        try
+                        {
+                            Console.Write("Masukkan Id : ");
+                            int id_employee = Convert.ToInt32(Console.ReadLine());
+                            historyController.GetById(id_employee);
+                        }
+                        catch
+                        {
+                            EmptyInput();
+                        }
+                        
                         PressAnyKey();
                         break;
 
@@ -246,9 +277,17 @@ namespace MVCArchitecture
                         PressAnyKey();
                         break;
                     case 4:
-                        Console.Write("Masukkan Id : ");
-                        int id_employee = Convert.ToInt32(Console.ReadLine());
-                        employeeController.GetById(id_employee);
+                        try 
+                        {
+                            Console.Write("Masukkan Id : ");
+                            int id_employee = Convert.ToInt32(Console.ReadLine());
+                            employeeController.GetById(id_employee);
+                        }
+                        catch
+                        {
+                            EmptyInput();
+                        }
+                        
                         PressAnyKey();
                         break;
 
@@ -292,9 +331,17 @@ namespace MVCArchitecture
                         PressAnyKey();
                         break;
                     case 4:
-                        Console.Write("Masukkan Id : ");
-                        int id = Convert.ToInt32(Console.ReadLine());
-                        departmentController.GetById(id);
+                        try
+                        {
+                            Console.Write("Masukkan Id : ");
+                            int id = Convert.ToInt32(Console.ReadLine());
+                            departmentController.GetById(id);
+                        }
+                        catch
+                        {
+                            EmptyInput();
+                        }
+                        
                         PressAnyKey();
                         break;
 
@@ -338,9 +385,17 @@ namespace MVCArchitecture
                         PressAnyKey();
                         break;
                     case 4:
-                        Console.Write("Masukkan Id : ");
-                        string id = Console.ReadLine();
-                        jobController.GetById(id);
+                        try
+                        {
+                            Console.Write("Masukkan Id : ");
+                            string id = Console.ReadLine();
+                            jobController.GetById(id);
+                        }
+                        catch
+                        {
+                            EmptyInput();
+                        }
+                        
                         PressAnyKey();
                         break;
 
@@ -384,9 +439,17 @@ namespace MVCArchitecture
                         PressAnyKey();
                         break;
                     case 4:
-                        Console.Write("Masukkan Id : ");
-                        int id = Convert.ToInt32(Console.ReadLine());
-                        locationController.GetById(id);
+                        try
+                        {
+                            Console.Write("Masukkan Id : ");
+                            int id = Convert.ToInt32(Console.ReadLine());
+                            locationController.GetById(id);
+                        }
+                        catch
+                        {
+                            EmptyInput();
+                        }
+                        
                         PressAnyKey();
                         break;
 
@@ -414,6 +477,11 @@ namespace MVCArchitecture
         {
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
+        }
+
+        private static void EmptyInput()
+        {
+            Console.WriteLine("Your input is empty!");
         }
     }
 }
